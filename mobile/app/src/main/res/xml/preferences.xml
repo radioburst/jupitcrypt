@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <PreferenceCategory android:title="General" app:iconSpaceReserved="false">
+    <androidx.preference.CheckBoxPreference
+        android:defaultValue="false"
+        android:key="show_pwd"
+        android:summary="show password when adding a new one"
+        android:title="Always show password"
+        app:iconSpaceReserved="false" />
+
+    <EditTextPreference
+        android:defaultValue="3"
+        android:dialogTitle="Password retries"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:key="wrong_entry_limit"
+        android:summary="max wrong password retries"
+        android:title="Password retries"
+        app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Password generator" app:iconSpaceReserved="false">
+        <EditTextPreference
+            android:defaultValue="24"
+            android:dialogTitle="Password length"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:key="pwd_length"
+            android:summary="auto gen password length"
+            android:title="Password length"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="use_special_c"
+            android:title="Use special characters"
+            android:summary="use special chars for auto gen"
+            app:iconSpaceReserved="false" />
+
+        <EditTextPreference
+            android:defaultValue="#%&amp;!?*+-=$()/_:;,.@"
+            android:dialogTitle="Special characters"
+            android:inputType="text"
+            android:key="special_chars"
+            android:summary="special characters for auto gen"
+            android:title="Special characters"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="use_numbers"
+            android:title="Use numbers"
+            android:summary="use numbers for auto gen"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Google Drive" app:iconSpaceReserved="false">
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="use_google"
+            android:title="Sync to Google Drive"
+            android:summary="sync encrypted passwords to google drive"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:title="Logout"
+            android:key="logout_drive"
+            android:summary="logout from google drive"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:title="Delete"
+            android:key="delete_drive"
+            android:summary="logout and delete all passwords from google drive"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Biometrics" app:iconSpaceReserved="false">
+    <SwitchPreferenceCompat
+        android:defaultValue="false"
+        android:key="use_biometrics"
+        android:title="Enable biometrics"
+        android:summary="use biometrics to login"
+        app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

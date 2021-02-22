@@ -9,6 +9,13 @@
 *.so.*
 *.dll
 *.dylib
+*.obj
+*.ilk
+*.pdb
+*.vc.pdb
+*.exe
+*.res
+*.rc
 
 # Qt-es
 object_script.*.Release
@@ -50,3 +57,16 @@ compile_commands.json
 
 # QtCreator local machine specific files for imported projects
 *creator.user*
+
+# Kotlin
+*.iml
+**/.gradle/
+*/local.properties
+*/.idea/
+.DS_Store
+**/build/*
+*/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.json
