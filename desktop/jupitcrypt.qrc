@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/images/jupiter.ico</file>
+        <file>resources/images/jupiter.png</file>
+        <file>resources/client_secret.json</file>
+        <file>resources/images/jupiter64x64.png</file>
+    </qresource>
+</RCC>
