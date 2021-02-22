@@ -36,9 +36,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 unix: LIBS += -lcrypto
 
 win32{
-    INCLUDEPATH += C:/OpenSSL-Win32/include
-    DEPENDPATH += C:/OpenSSL-Win32/include
-    LIBS += C:\OpenSSL-Win32\lib\MinGW\libcrypto.a
+    win32:contains(QMAKE_HOST.arch, x86_64) {
+        INCLUDEPATH += "C:/Program Files/OpenSSL-Win64/include"
+        DEPENDPATH += "C:/Program Files/OpenSSL-Win64/include"
+        LIBS += "C:/Program Files/OpenSSL-Win64/lib/VC/libcrypto64MD.lib"
+    } else {
+        INCLUDEPATH += "C:/Program Files (x86)/OpenSSL-Win32/include"
+        DEPENDPATH += "C:/Program Files (x86)/OpenSSL-Win32/include"
+        LIBS += "C:/Program Files (x86)/OpenSSL-Win32/lib/VC/libcrypto32MD.lib"
+    }
 }
 
 SOURCES += \
