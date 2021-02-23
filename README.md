@@ -1,5 +1,5 @@
 # jupitcrypt
-Jupitcrypt is a lightweight and easy to use password manager. It uses the PBKDF2 key derivation functions and AES256 to encrypt/decrypt passwords with a master password. With the google drive synchronization feature it is possible to share your passwords between devices. The Desktop App is based on the Qt Framework and OpenSSL which makes it available form most platforms. 
+Jupitcrypt is a lightweight and easy to use password manager. It uses the PBKDF2 key derivation functions and AES256 to encrypt/decrypt passwords with a master password. With the google drive synchronization feature it is possible to share your passwords between devices. The Desktop App is based on the Qt Framework and OpenSSL which makes it available for most platforms. 
 The mobile app is written in Kotlin thus it is only available for Android. <br>
 
 [![Android CI](https://github.com/radioburst/jupitcrypt/actions/workflows/android.yml/badge.svg)](https://github.com/radioburst/jupitcrypt/actions/workflows/android.yml)
