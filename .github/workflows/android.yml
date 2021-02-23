@@ -17,18 +17,15 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Grant execute permission for gradlew
-      run: chmod +x mobile/gradlew
     - name: Setup Environment
-      run: ./mobile/gradlew prepareKotlinBuildScriptModel
-    - name: Setup Environment
-      run: ./mobile/gradlew init
-    - name: Setup Environment
-      run: ./mobile/gradlew wrapper
+      run: |
+        cd mobile
+        chmod +x ./gradlew
+        ./gradlew prepareKotlinBuildScriptModel
     - name: Build debug Apk
-      run: ./mobile/gradlew buildNeeded --stacktrace --scan
+      run: ./gradlew build
     - name: Upload Apk
       uses: actions/upload-artifact@v1
       with:
         name: app
-        path: /mobile/app/build/outputs/apk/debug/app-debug.apk
+        path: /app/build/outputs/apk/debug/app-debug.apk
