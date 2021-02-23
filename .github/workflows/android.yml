@@ -21,3 +21,10 @@ jobs:
       run: chmod +x mobile/gradlew
     - name: Build with Gradle
       run: ./mobile/gradlew build --warning-mode all
+    - name: Build debug Apk
+      run: ./mobile/gradlew assembleDebug --stacktrace
+    - name: Upload Apk
+      uses: actions/upload-artifact@v1
+      with:
+        name: app
+        path: app/build/outputs/apk/debug/app-debug.apk
