@@ -20,9 +20,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x mobile/gradlew
     - name: Build with Gradle
-      run: ./mobile/gradlew build --warning-mode all
-    - name: Build debug Apk
-      run: ./mobile/gradlew assembleDebug --stacktrace
+      run: ./mobile/gradlew build --stacktrace --warning-mode all
     - name: Upload Apk
       uses: actions/upload-artifact@v1
       with:
